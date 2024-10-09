@@ -2,7 +2,8 @@ import './Order.css';
 
 export default function Order ({order}) {
 
-
+    const date = new Date(order.date)
+    const dateFormat = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
     return (
         <>
             <div className='orderContainer'>
@@ -13,7 +14,7 @@ export default function Order ({order}) {
                     </div>
                     <div>
                         <p className='orderHeaderLabel'> Pedido feito em </p>
-                        <p className='orderHeaderContent'> { order.date }</p>
+                        <p className='orderHeaderContent'> { dateFormat }</p>
                     </div>
                 </div>
                 <div className='orderContent'>

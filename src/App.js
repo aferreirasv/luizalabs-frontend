@@ -7,7 +7,7 @@ function App() {
     id: "213719239",
     customer: "Alan Ferreira",
     status: "PENDENTE",
-    date:"2024-10-09T19:09:055Z" ,
+    date:"2024-10-09T17:03:06Z" ,
     cart: [
       {
         name: "ventilador 5 velocidades",
@@ -23,7 +23,7 @@ function App() {
     id: "187875454",
     customer: "Alan Ferreira",
     status: "PENDENTE",
-    date:"2024-10-09T19:09:055Z" ,
+    date:"2024-10-09T17:03:06Z" ,
     cart: [
       {
         name: "Aspirador de Pó Vertical e Portátil",
@@ -39,7 +39,7 @@ function App() {
     id: "2134634739",
     customer: "Renan Ferreira",
     status: "PENDENTE",
-    date:"2024-10-09T19:09:055Z" ,
+    date:"2024-10-09T17:03:06Z" ,
     cart: [
       {
         name: "ventilador 5 velocidades",
@@ -66,9 +66,9 @@ function App() {
         })
       }
 
-    <div>
-      <input type='button' ></input>
-      <input type='button' ></input>
+    <div className='pageNavigator'>
+      <input className='pageButton' type='button' value="&lt;" />  
+      <input className='pageButton' type='button' value=" &gt;" />
     </div>
     </div>
     </>
