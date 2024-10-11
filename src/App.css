@@ -16,8 +16,27 @@
   margin: 15px;
 }
 
+.pageButton:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+
 .pageNavigator {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.App {
+  font-family: 'Inter', sans-serif;
+  width: minmax(50%, 400px);
+}
+
+.pageLabel {
+  font-size: large;
+  font-weight: 900;
 }
