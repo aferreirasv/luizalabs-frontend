@@ -33,8 +33,9 @@ function App() {
         api.get(
             `${baseURL}/orders?page=${page}&amount=${amount}`
         ).then(res => {
-          setOrders(res.data.orders)
-          setTotalPages(Math.ceil(res.data.count/amount))
+          console.log(res.data)
+          setOrders(res.data.orders || [])
+          setTotalPages(Math.ceil(res.data.count/ordersAmount) || 0)
         })
         
     }
@@ -50,9 +51,9 @@ function App() {
     </header>
     <div className='App'>
       {
-        orders.map( (order) => {
+        orders.length > 0 ? orders.map( (order) => {
           return <Order order={order} key={order.id}/>
-        })
+        }) : <p>Nenhum pedido foi encontrado.</p>
       }
 
       <div className='pageNavigator'>
